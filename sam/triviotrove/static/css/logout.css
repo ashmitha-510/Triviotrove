@@ -1,0 +1,254 @@
+/* ==========================
+   General Styles
+=========================== */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  flex-direction: column;
+  transition: background-color 0.5s ease, color 0.5s ease;
+  position: relative;
+}
+
+/* ==========================
+   Dark Mode
+=========================== */
+.dark-mode {
+  background-image: url("path-to-dark-https://t3.ftcdn.net/jpg/03/08/71/84/360_F_308718440_Lsad7H4qi33o1ofctkV5CDNv51hiHbMS.jpg");
+  background-color: #000;
+  color: #ffffff;
+}
+
+.dark-mode #container {
+  background-color: #222;
+  color: white;
+}
+
+/* ==========================
+   Scoreboard (Top-Left)
+=========================== */
+#scoreboard {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* ==========================
+   Dark Mode Toggle (Top-Right)
+=========================== */
+#toggle-dark-mode {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  color: black;
+}
+
+#toggle-dark-mode:hover {
+  color: #4caf50;
+}
+
+/* Dark mode toggle styles */
+.dark-mode #toggle-dark-mode {
+  color: white;
+}
+
+.dark-mode #toggle-dark-mode:hover {
+  color: #4caf50;
+}
+
+/* ==========================
+   Game Container (Centered)
+=========================== */
+#container {
+  background: #f8f8f8;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 350px;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* ==========================
+   Word Display
+=========================== */
+#word {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+}
+
+/* ==========================
+   Input Field
+=========================== */
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #fff;
+  color: black;
+}
+
+/* Dark mode input */
+.dark-mode input[type="text"] {
+  background: #333;
+  color: white;
+  border: 1px solid #555;
+}
+
+/* ==========================
+   Buttons
+=========================== */
+.buttons-container {
+  margin-top: 15px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Dark mode buttons */
+.dark-mode button {
+  background-color: #4caf50;
+  color: white;
+}
+
+.dark-mode button:hover {
+  background-color: #45a049;
+}
+
+/* ==========================
+   Popup Message
+==================*/
+.popup {
+  position: fixed;
+  top: 10px; /* Moves the popup to the top */
+  left: 50%;
+  transform: translateX(-50%); /* Horizontally center */
+  padding: 15px 25px;
+  border-radius: 8px;
+  font-size: 18px;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.popup.show {
+  text-align: end;
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup.correct {
+  background-color: #4caf50;
+  color: white;
+}
+
+.popup.incorrect {
+  background-color: #e74c3c;
+  color: white;
+}
+
+/* Red for incorrect answer */
+.popup.error {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #e74c3c;
+}
+
+/* ==========================
+   Logout Link
+=========================== */
+p a {
+  color: #4caf50;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+p a:hover {
+  text-decoration: underline;
+}
+
+/* ==========================
+   Responsive Design
+=========================== */
+@media (max-width: 480px) {
+  #container {
+    width: 90%;
+    padding: 20px;
+  }
+}
+/* ==========================
+   Popup Message (Fixed)
+=========================== */
+.popup {
+  position: fixed;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: 15px 25px;
+  border-radius: 8px;
+  font-size: 18px;
+  text-align: start;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+  transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s ease;
+}
+
+/* Show popup */
+.popup.show {
+  text-align: start;
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0);
+}
+
+/* Green for correct answers */
+.popup.success {
+  text-align: end;
+  background-color: #4caf50;
+}
+
+/* Red for incorrect answers */
+.popup.error {
+  text-align: end;
+  background-color: #e74c3c;
+}
+
+/* Yellow for warnings */
+.popup.warning {
+  text-align: end;
+  background-color: #f1c40f;
+}

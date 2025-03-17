@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Triviotrove</title>
+
+    <!-- Load external stylesheet -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+
+    <!-- Font Awesome for Dark Mode Icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Score Display (Top-Left Corner) -->
+    <div id="scoreboard">
+      <p>Score: <span id="score">0</span></p>
+    </div>
+
+    <!-- Dark Mode Toggle (Top-Right Corner) -->
+    <button id="toggle-dark-mode">
+      <i class="fa-solid fa-moon"></i>
+    </button>
+
+    <!-- Popup Message -->
+    <div id="popup" class="popup"></div>
+
+    <!-- Game Container (Centered) -->
+    <div id="container">
+      <h1>Triviotrove</h1>
+      <div id="word"></div>
+      <input type="text" id="guess" placeholder="Your guess..." />
+      <div class="buttons-container">
+        <button id="submit">Submit</button>
+        <button id="new-word">New Word</button>
+      </div>
+      <p><a href="{% url 'logout' %}">Logout</a></p>
+    </div>
+
+    <!-- Load external JavaScript file -->
+    <script src="{% static 'js/script.js' %}"></script>
+    <script src="{% static 'js/game.js' %}"></script>
+  </body>
+</html>

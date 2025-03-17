@@ -1,0 +1,208 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+  color: #333;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Scoreboard */
+#scoreboard {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* Dark Mode Toggle */
+#toggle-dark-mode {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.3s;
+}
+
+#toggle-dark-mode:hover {
+  color: #555;
+}
+
+/* Dark Mode */
+.dark-mode {
+  background-color: #222;
+  color: #f4f4f4;
+}
+
+.dark-mode #toggle-dark-mode {
+  color: #f4f4f4;
+}
+
+.dark-mode #container {
+  background-color: #333;
+  color: white;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.dark-mode input[type="text"] {
+  background-color: #444;
+  color: white;
+  border-color: #666;
+}
+
+.dark-mode input::placeholder {
+  color: #bbb;
+}
+
+.dark-mode button {
+  background-color: #4caf50;
+  color: white;
+}
+
+.dark-mode button:hover {
+  background-color: #45a049;
+}
+
+.dark-mode p a {
+  color: #ff5252;
+}
+
+/* Popup Message - Default (Hidden) */
+.popup {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 16px;
+  min-width: 200px;
+  display: none; /* Hidden by default */
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Correct Answer (Green Box, White Text) */
+.popup.correct {
+  background: #28a745; /* Green */
+  color: white; /* White text */
+  border: 2px solid #218838;
+}
+
+/* Incorrect Answer (Red Box, Black Text) */
+.popup.incorrect {
+  background: #dc3545; /* Red */
+  color: black; /* Black text */
+  border: 2px solid #c82333;
+}
+
+/* Game Container */
+#container {
+  text-align: center;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 400px;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Game Elements */
+h1 {
+  margin-bottom: 10px;
+}
+
+#word {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+input[type="text"] {
+  width: 80%;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Buttons - Now Green */
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  background: #4caf50; /* Green */
+  color: white;
+  transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background: #45a049; /* Darker Green */
+  transform: scale(1.05);
+}
+
+#submit {
+  background: #4caf50; /* Green */
+}
+
+#submit:hover {
+  background: #45a049;
+}
+
+#new-word {
+  background: #4caf50; /* Green */
+}
+
+#new-word:hover {
+  background: #45a049;
+}
+
+/* Logout Link */
+p a {
+  display: block;
+  margin-top: 15px;
+  text-decoration: none;
+  color: #d9534f;
+  font-weight: bold;
+}
+
+p a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+  #container {
+    width: 95%;
+  }
+
+  button {
+    width: 100%;
+  }
+}
