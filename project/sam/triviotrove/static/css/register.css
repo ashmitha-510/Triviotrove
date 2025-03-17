@@ -1,0 +1,149 @@
+body {
+  background-image: url(https://t4.ftcdn.net/jpg/03/95/43/37/360_F_395433714_yQhbyl5mL8eLsHBVGHhY5nZdhuyVOoGD.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+  font-family: Arial, sans-serif;
+  background-color: #131212;
+  color: #efeaeaf7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* ==========================
+   Register Container
+=========================== */
+#container {
+  background: none;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+/* Hover effect for subtle elevation */
+#container:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* ==========================
+   Form Styling
+=========================== */
+form {
+  background: none;
+  display: flex;
+  flex-direction: column;
+  color: #0c0c0cf9;
+}
+
+/* Label Styling */
+label {
+  background: none;
+  text-align: left;
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+  font-size: 14px;
+  color: #f1ebeb;
+}
+
+/* Input Fields */
+input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Focus effect */
+input:focus {
+  border-color: #4caf50;
+  outline: none;
+  box-shadow: 0px 0px 5px rgba(76, 175, 80, 0.5);
+}
+
+/* ==========================
+   Error Messages
+=========================== */
+.error-messages {
+  background: #ffdddd;
+  color: #d8000c;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  text-align: left;
+}
+
+.error {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+/* ==========================
+   Submit Button
+=========================== */
+button {
+  background-color: #4caf50;
+  color: rgb(255, 255, 255);
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+  transform: scale(1.03);
+}
+
+/* Add subtle click effect */
+button:active {
+  transform: scale(0.98);
+}
+
+/* ==========================
+   Login Link
+=========================== */
+p {
+  color: aliceblue;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+p a {
+  color: #4caf50;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+p a:hover {
+  text-decoration: underline;
+  color: #388e3c;
+}
+
+/* ==========================
+   Responsive Design
+=========================== */
+@media (max-width: 450px) {
+  #container {
+    padding: 20px;
+  }
+
+  input,
+  button {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
