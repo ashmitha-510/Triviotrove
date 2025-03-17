@@ -1,0 +1,170 @@
+/* === General Styles === */
+body {
+  background-image: url(https://t4.ftcdn.net/jpg/03/95/43/37/360_F_395433714_yQhbyl5mL8eLsHBVGHhY5nZdhuyVOoGD.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+  font-family: Arial, sans-serif;
+  background-color: #131212;
+  color: #efeaeaf7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* === Dark Mode Support === */
+.dark-mode {
+  background-color: #333;
+  color: #f4f4f4;
+}
+
+/* === Game Container === */
+#game-container {
+  background: #112233; /* Slightly lighter than the body for contrast */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  width: 350px;
+  text-align: center;
+  transition: background 0.5s ease, color 0.5s ease;
+}
+.dark-mode #game-container {
+  background: #222;
+  color: white;
+}
+
+/* === Buttons === */
+button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* === Dark Mode Toggle Button === */
+#toggle-dark-mode {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  color: #fff;
+}
+
+#toggle-dark-mode:hover {
+  color: #4caf50;
+}
+
+/* === Scoreboard === */
+#scoreboard {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* === Popups for Correct/Incorrect Answers === */
+.popup {
+  position-area: top;
+  top: 10px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 15px 25px;
+  border-radius: 8px;
+  font-size: 18px;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+  text-align: start;
+  transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s ease;
+}
+
+.popup.show {
+  text-align: right;
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0);
+}
+
+.popup.correct {
+  text-align: end;
+  background-color: #4caf50;
+  color: white;
+}
+
+.popup.incorrect {
+  text-align: end;
+  background-color: #e74c3c;
+  color: white;
+}
+
+/* === Login Page Styles === */
+.login-container {
+  background: none;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.login-container h2 {
+  text-align: center;
+  padding: 30px;
+  color: #e3e9e3;
+}
+.login-container p a {
+  max-width: 100px;
+  height: 100px;
+  padding: 20px;
+  color: greenyellow;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 5px;
+  background: #223344;
+  color: white;
+}
+
+/* === Messages (Success & Error) === */
+.message {
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.message.success {
+  background-color: #2ecc71;
+}
+
+.message.error {
+  background-color: #e74c3c;
+}
+
+/* === Responsive Design for Mobile === */
+@media (max-width: 600px) {
+  #game-container,
+  .login-container {
+    width: 90%;
+  }
+}
