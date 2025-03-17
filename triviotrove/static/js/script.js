@@ -39,8 +39,12 @@ function fetchNewWord() {
 /* ==========================
    Timer Functions
 =========================== */
+
+/* ==========================
+   Timer Functions
+=========================== */
 function startTimer() {
-  timeLeft = 60;
+  timeLeft = 30;
   updateTimerDisplay();
 
   timer = setInterval(() => {
@@ -49,7 +53,20 @@ function startTimer() {
 
     if (timeLeft <= 0) {
       clearInterval(timer);
-      showPopup("⏳ Time's up! You lost the round.", "error");
+
+      // Deduct a point when time runs out
+      if (score > 0) {
+        score--;
+      }
+      scoreDisplay.textContent = score; // Update score display
+
+      // Check if the player lost
+      if (score === 0) {
+        showPopup("❌ You lost! Score reset to 0.", "error");
+      } else {
+        showPopup("⏳ Time's up! You lost 1 point.", "error");
+      }
+
       fetchNewWord(); // Get a new word when time runs out
     }
   }, 1000);
